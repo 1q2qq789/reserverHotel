@@ -1,0 +1,34 @@
+
+		<!-- Header -->
+			<header id="header">
+				<nav class="left">
+					<a href="#menu"><span>Menu</span></a>
+				</nav>
+				<a href="index.php" class="logo">HOTELO</a>
+					<?php
+				if (!isset($_SESSION['id'])) { ?>
+					<nav class="right">
+						<a href="inscription.php" class="button alt">S'inscrire</a>
+						<a href="utilisateur.php" class="button alt">Se connecter</a>
+					</nav>
+					<?php } else { ?>
+						<nav class="right">
+							<a href="deconnection.php" class="button alt">Se Deconnecter</a>
+						</nav>
+					<?php } ?>
+			</header>
+
+<!-- Menu -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.php">Accueil</a></li>
+					<li><a href="chambres.php">Chambres</a></li>
+					<li><a href="actualite.php">Actualités</a></li>
+					<li><a href="utilisateur.php">Utilisateur</a></li>
+					
+					
+				</ul>
+				<ul class="actions vertical">
+					<li><a href="utilisateur.php" class="button fit">Login</a></li>
+				</ul>
+			</nav>
